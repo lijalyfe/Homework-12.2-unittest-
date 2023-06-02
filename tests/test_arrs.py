@@ -11,6 +11,10 @@ class TestArrs(unittest.TestCase):
         arr = [1, 2, 3]
         self.assertEqual(get(arr, 3, None), None)
 
+    def test_get_negative_index_default(self):
+        arr = [1, 2, 3]
+        self.assertEqual(get(arr, -1, None), None)
+
 
 
 def test_slice():
