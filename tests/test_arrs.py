@@ -27,3 +27,18 @@ class TestArrs(unittest.TestCase):
         arr = [1, 2, 3, 4, 5]
         self.assertEqual(arrs.my_slice(arr, -3, -1), [3, 4])
 
+    def test_my_slice_negative_start_index(self):
+        arr = [1, 2, 3, 4, 5]
+        self.assertEqual(arrs.my_slice(arr, -3), [3, 4, 5])
+
+    def test_my_slice_negative_end_index(self):
+        arr = [1, 2, 3, 4, 5]
+        self.assertEqual(arrs.my_slice(arr, end=-2), [1, 2, 3])
+
+    def test_my_slice_out_of_range_indices(self):
+        arr = [1, 2, 3]
+        self.assertEqual(arrs.my_slice(arr, 10, 20), [])
+
+    def test_my_slice_empty_list(self):
+        arr = []
+        self.assertEqual(arrs.my_slice(arr), [])
