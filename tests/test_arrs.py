@@ -15,6 +15,10 @@ class TestArrs(unittest.TestCase):
         arr = [1, 2, 3]
         self.assertEqual(get(arr, -1, None), None)
 
+    def test_my_slice_full_list(self):
+        arr = [1, 2, 3]
+        self.assertEqual(my_slice(arr), [1, 2, 3])
+
 
 
 def test_slice():
