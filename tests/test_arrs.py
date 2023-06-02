@@ -23,8 +23,6 @@ class TestArrs(unittest.TestCase):
         arr = [1, 2, 3, 4, 5]
         self.assertEqual(my_slice(arr, 1, 4), [2, 3, 4])
 
-
-
-def test_slice():
-    assert arrs.my_slice([1, 2, 3, 4], 1, 3) == [2, 3]
-    assert arrs.my_slice([1, 2, 3], 1) == [2, 3]
+    def test_my_slice_negative_start_and_end_indices(self):
+        arr = [1, 2, 3, 4, 5]
+        self.assertEqual(my_slice(arr, -3, -1), [3, 4])
