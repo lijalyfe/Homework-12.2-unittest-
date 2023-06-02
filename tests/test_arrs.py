@@ -1,8 +1,11 @@
 import unittest
-from arrs import arrs
+from arrs import get, my_slice
 
 
 class TestArrs(unittest.TestCase):
+    def test_get_existing_index(self):
+        arr = [1, 2, 3]
+        self.assertEqual(get(arr, 1), 2)
 def test_get():
     assert arrs.get([1, 2, 3], 1, "test") == 3
     assert arrs.get([], 0, "test") == "test"
