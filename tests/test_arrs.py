@@ -1,4 +1,5 @@
-from utils import arrs
+import unittest
+from arrs import arrs
 
 
 def test_get():
